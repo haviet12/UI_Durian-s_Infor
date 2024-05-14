@@ -15,8 +15,14 @@ const customParamValue = getQueryParam('custom_param');
 // Import the functions you need from the SDKs you need
 
 
+// Import the necessary Firebase functions
 
-var valueDayExport = firebase.database().ref(customParamValue).child("key1");
+
+// Your web app's Firebase configuration
+
+
+
+var valueDayExport = firebase.database().ref(customParamValue).child("Name");
 valueDayExport.on("value", (snap) => {
   console.log("Day: " + snap.val());
   document.getElementById("day").innerHTML = snap.val();
