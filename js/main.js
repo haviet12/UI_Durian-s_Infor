@@ -55,7 +55,7 @@ valueType.on("value", (snap) => {
 
 // Reference to a specific image file
 const storageRef = storage.ref();
-const imgRef = storageRef.child(customParamValue +".jpg");
+const imgRef = storageRef.child(customParamValue +".JPG");
 
 // Get the download URL
 imgRef.getDownloadURL().then((url) => {
