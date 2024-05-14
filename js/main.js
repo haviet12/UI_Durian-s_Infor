@@ -51,3 +51,17 @@ valueType.on("value", (snap) => {
   console.log("Type: " + snap.val());
   document.getElementById("type").innerHTML = snap.val() ;
 });
+
+
+// Reference to a specific image file
+const storageRef = storage.ref();
+const imgRef = storageRef.child('gs://duriandb.appspot.com/' + customParamValue +".jpg");
+
+// Get the download URL
+imgRef.getDownloadURL().then((url) => {
+    // Insert url into an <img> tag to display the image
+    const imgElement = document.getElementById('IMG');
+    imgElement.src = url;
+}).catch((error) => {
+    console.error("Error getting download URL:", error);
+});
