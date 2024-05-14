@@ -20,11 +20,11 @@
 // });
 
 
-var valueDayExport = firebase.database().ref("Sample1").child("Name");
-valueDayExport.on("value", (snap) => {
-  console.log("Day: " + snap.val());
-  document.getElementById("day").innerHTML = snap.val();
-});
+// var valueDayExport = firebase.database().ref("Sample1").child("Name");
+// valueDayExport.on("value", (snap) => {
+//   console.log("Day: " + snap.val());
+//   document.getElementById("date").innerHTML = snap.val();
+// });
 
 
 
@@ -34,17 +34,17 @@ valueDayExport.on("value", (snap) => {
 //   document.getElementById("orgin").innerHTML = snap.val() ;
 // });
 
-// var valueHum = firebase.database().ref(customParamValue).child("durian's name");
-// valueHum.on("value", (snap) => {
-//   console.log("durian's name: " + snap.val());
-//   document.getElementById("name").innerHTML = snap.val() ;
-// });
+var valueName = firebase.database().ref("Sample1").child("Name");
+valueName.on("value", (snap) => {
+  console.log("durian's name: " + snap.val());
+  document.getElementById("name").innerHTML = snap.val() ;
+});
 // // 
-// var valueHum = firebase.database().ref(customParamValue).child("weight");
-// valueHum.on("value", (snap) => {
-//   console.log("trọng lượng: " + snap.val());
-//   document.getElementById("weight").innerHTML = snap.val() ;
-// });
+var valueWeight = firebase.database().ref("Sample1").child("Weight");
+valueWeight.on("value", (snap) => {
+  console.log("trọng lượng: " + snap.val());
+  document.getElementById("weight").innerHTML = snap.val() ;
+});
 
 // var valuepH = firebase.database().ref(customParamValue).child("type");
 // valuepH.on("value", (snap) => {
