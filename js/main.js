@@ -20,19 +20,19 @@ console.log("custom param value: " + customParamValue);
 // });
 
 
-// var valueDayExport = firebase.database().ref("Sample1").child("Name");
-// valueDayExport.on("value", (snap) => {
-//   console.log("Day: " + snap.val());
-//   document.getElementById("date").innerHTML = snap.val();
-// });
+var valueDayExport = firebase.database().ref(customParamValue).child("Date_Export");
+valueDayExport.on("value", (snap) => {
+  console.log("Day: " + snap.val());
+  document.getElementById("date").innerHTML = snap.val();
+});
 
 
 
-// var valueOrgin = firebase.database().ref(customParamValue).child("orgin");
-// valueOrgin.on("value", (snap) => {
-//   console.log("the orgin: " + snap.val());
-//   document.getElementById("orgin").innerHTML = snap.val() ;
-// });
+var valueOrgin = firebase.database().ref(customParamValue).child("Orgin");
+valueOrgin.on("value", (snap) => {
+  console.log("the orgin: " + snap.val());
+  document.getElementById("orgin").innerHTML = snap.val() ;
+});
 
 var valueName = firebase.database().ref(customParamValue).child("Name");
 valueName.on("value", (snap) => {
@@ -46,8 +46,8 @@ valueWeight.on("value", (snap) => {
   document.getElementById("weight").innerHTML = snap.val() ;
 });
 
-// var valuepH = firebase.database().ref(customParamValue).child("type");
-// valuepH.on("value", (snap) => {
-//   console.log("Type: " + snap.val());
-//   document.getElementById("type").innerHTML = snap.val() ;
-// });
+var valueType = firebase.database().ref(customParamValue).child("Type");
+valueType.on("value", (snap) => {
+  console.log("Type: " + snap.val());
+  document.getElementById("type").innerHTML = snap.val() ;
+});
