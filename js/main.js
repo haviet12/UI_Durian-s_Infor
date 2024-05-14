@@ -34,13 +34,13 @@ console.log("custom param value: " + customParamValue);
 //   document.getElementById("orgin").innerHTML = snap.val() ;
 // });
 
-var valueName = firebase.database().ref("Sample1").child("Name");
+var valueName = firebase.database().ref(customParamValue).child("Name");
 valueName.on("value", (snap) => {
   console.log("durian's name: " + snap.val());
   document.getElementById("name").innerHTML = snap.val() ;
 });
 // // 
-var valueWeight = firebase.database().ref("Sample1").child("Weight");
+var valueWeight = firebase.database().ref(customParamValue).child("Weight");
 valueWeight.on("value", (snap) => {
   console.log("trọng lượng: " + snap.val());
   document.getElementById("weight").innerHTML = snap.val() ;
