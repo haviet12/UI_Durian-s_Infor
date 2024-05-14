@@ -9,17 +9,15 @@ function getQueryParam(param) {
 const customParamValue = getQueryParam('custom_param');
 
 // Hiển thị giá trị của tham số "custom_param" lên trang web
-// const customParamElement = document.createElement('p');
-// customParamElement.textContent = 'Giá trị của tham số custom_param là: ' + customParamValue;
-// document.body.appendChild(customParamElement);
-// Import the functions you need from the SDKs you need
+const customParamElement = document.createElement('p');
+customParamElement.textContent = 'Giá trị của tham số custom_param là: ' + customParamValue;
+document.body.appendChild(customParamElement);
 
 
-// Import the necessary Firebase functions
 
-
-// Your web app's Firebase configuration
-
+// $(document).ready(function(){
+//   alert(1);
+// });
 
 
 var valueDayExport = firebase.database().ref(customParamValue).child("Name");
